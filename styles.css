@@ -718,3 +718,6 @@ body.dark.home .nav.scrolled .nav-links a.resume-link { color: #0e141c; }
   /* banner no longer needs to clear a floating nav */
   body.sub .banner { height: 180px; padding-top: 0; }
 }
+
+/* LinkedIn icon: white in dark mode */
+body.dark .contact .linkedin-icon { filter: brightness(0) invert(1); }
