@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Engineering — Olivia Velten-Lomelín</title>
+<meta name="description" content="Portfolio of Olivia Velten-Lomelín — Mechanical Engineering master's student at Stanford University focusing on Ocean Robotics.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Olivia Velten-Lomelín — Portfolio">
+<meta property="og:description" content="Mechanical engineer focusing on ocean robotics. MS at Stanford, BS from MIT. Projects from Boston Dynamics, NASA, MIT Sea Grant, and more.">
+<meta property="og:image" content="https://oliviaveltenlomelin.github.io/og-card.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+</head>
+<body class="home">
+
+<div class="scroll-progress"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">Olivia Velten-Lomelín</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Welcome</a></li>
+      <li><a href="engineering.html" class="active">Engineering</a></li>
+      <li><a href="design.html">Design</a></li>
+      <li><a href="personal.html">Personal Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a class="resume-link" href="Olivia-Velten-Lomelin-Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+    </ul>
+    <button class="theme-toggle" aria-label="Toggle dark mode">☾</button>
+  </div>
+</nav>
+
+<div class="banner" id="engineering"><h2>Engineering</h2></div>
+
+<div class="filter-bar" role="group" aria-label="Filter projects by year">
+  <button class="chip active" data-year="All">All</button>
+  <button class="chip" data-year="2026">2026</button>
+  <button class="chip" data-year="2025">2025</button>
+  <button class="chip" data-year="2024">2024</button>
+  <button class="chip" data-year="2023">2023</button>
+  <button class="chip" data-year="2022">2022</button>
+  <button class="chip" data-year="2021">2021</button>
+  <button class="chip" data-year="2020">2020</button>
+  <button class="chip" data-year="2019">2019</button>
+</div>
+
+<div class="section-body">
+
+  <article class="project">
+    <h3>Ulysses <span class="sub">— Sea Grass Harvester</span></h3>
+    <p class="year">2026</p>
+    <div class="desc">
+      <p>Ulysses Inc. is a San Francisco-based start-up developing various underwater robotic platforms -- namely, a 6-DoF autonomous underwater drone. During the summer of 2026, I worked as a Mechanical Engineering Intern and am now continuing my work with them part-time as I finish my studies.</p>
+      <p>One of my projects was to design and build a seagrass harvesting payload that sits on the belly of the drone to harvest seagrass fruits for seed processing and restoration.</p>
+      <p>The payload uses a passively moving, weighted, and spring-loaded door that opens with the flow of water as the drone swims over the seagrass at a set velocity between 0.5 - 4.0 m/s, allowing the entry of fruits into the collection cage. The opening velocity is adjustable. When the drone stops or moves in reverse, the door closes. The geometry minimizes drag as much as possible while still directing the flow to guide the fruits into the collection cage. The collection cage can hold up to 40 L of fruits at a time, and this limit is parameterized in the CAD.</p>
+      <p>This system was designed for ease of assembly, transportation, and manufacturing. It is built primarily from Delrin, anodized aluminum, and 316 stainless steel, with a few non-structural FDM and SLS printed parts. I CNC-machined the smaller components such as the door hinges and shafts on a 5-axis Haas CNC mill, with all CAM and machining done by me, while larger components were outsourced to external manufacturers.</p>
+      <p>This system will be used to collect seagrass fruits in the coming months.</p>
+    </div>
+    <div class="gallery">
+      <img src="images/575388_49c2ca99d0cb499a87746ab3e776ba10~mv2.jpg" alt="Seagrass harvester payload" loading="lazy">
+      <img src="images/575388_2ee68b4500964ad89f8f73e0ee5bdd06~mv2.jpg" alt="Seagrass harvester side view" loading="lazy">
+      <img src="images/575388_d49a7af3f0d04fbabbe8c0e891f94f3e~mv2.jpg" alt="Seagrass harvester assembly" loading="lazy">
+      <img src="images/575388_11a23de000294887bf3648406d6cc665~mv2.jpg" alt="Seagrass harvester detail" loading="lazy">
+      <img class="wide" src="images/575388_8c7415a7f2974cdfb07772d8f4cc23c8~mv2.png" alt="Seagrass harvester CAD banner" loading="lazy">
+    </div>
+  </article>
+
+  <article class="project">
+    <h3>Ulysses <span class="sub">— Motor Test Rig</span></h3>
+    <p class="year">2026</p>
+    <div class="desc">
+      <p>Ulysses Inc. is a San Francisco-based start-up developing various underwater robotic platforms -- namely, a 6-DoF autonomous underwater drone. During the summer of 2026, I worked as a Mechanical Engineering Intern and am now continuing my work with them part-time as I finish my studies.</p>
+      <p>One of my projects was to design and build a motor test rig that enabled accurate, quick, and consistent characterization of our various motor configurations. Thrust, torque, RPM, motor current, input current, and power measurements were taken from each motor. The rig had an open diameter of 300 mm where the motor sat for minimal flow obstruction. Six load cells were used for measurement: three for thrust measurement and three for torque measurement. All parts were custom designs made from Delrin and anodized aluminum. Due to size constraints, they were manufactured externally.</p>
+      <p>Motors were attached to simple aluminum rings with custom mounts specific to the motor/configuration. The rings were then mounted to the test rig with 6 quick-connect spring-loaded pistons that I designed and machined in-house. This allowed for quick attachment and removal of motors for rapid testing.</p>
+      <p>The rig is controlled with a Raspberry Pi 4 over SSH connection. The script guides the user through a menu of test types, ranging from quick duty cycle tests to longer power sweeps.</p>
+      <p class="note">* Findings not shown for confidentiality reasons.</p>
+    </div>
+    <div class="gallery">
+      <img src="images/575388_1ae4b7e4374d4bac8809e007b6f8337a~mv2.png" alt="Motor test rig" loading="lazy">
+      <img src="images/575388_c100c355b8e241b39f6afb6d5e5f8dbb~mv2.png" alt="Motor test rig CAD" loading="lazy">
+    </div>
+  </article>
+
+  <article class="project">
+    <h3>NASA × IFOS Subsurface Sampling Project</h3>
+    <p class="year">2026</p>
+    <div class="desc">
+      <p>As part of the NASA × IFOS Subsurface Sampling Project, I designed and built an FBG-based strain sensing system integrated into a custom lunar micro rover wheel to classify different lunar regolith simulants through machine learning. The mechanical assembly was custom-designed, including the rover wheel (inspired by Lunar Outpost's MAPP platform), a gearbox with a 30:1 combined gear ratio, and a guiding track system. A single-fiber array of 6 Fiber Bragg Gratings was embedded in the wheel to capture strain data as it rolled over different sand types.</p>
+      <p>I collected over 390 experimental trials across five sand conditions: ultra-fine silica sand at varying moisture levels (0%, 3%, 6%), coarse silica sand, and volcanic lava sand. I synchronized FBG wavelength measurements with motor current readings for each run. Data was processed both as raw time-series signals and through FFT analysis to extract frequency-domain features, with the volcanic sand showing particularly distinct spectral signatures compared to the silica-based simulants.</p>
+      <p>I trained a Random Forest classifier on 228 trials and evaluated it on 87 trials collected under varied ambient conditions. The model achieved 90% accuracy with a 95% confidence interval of (0.83, 0.95), demonstrating that FBG-based strain sensing on a rover wheel is a viable approach for autonomous subsurface material classification on the lunar surface.</p>
+    </div>
+    <div class="gallery">
+      <img src="images/575388_32433365a9994762b06e3956b41eddbb~mv2.png" alt="Rover wheel test setup" loading="lazy">
+      <img src="images/575388_80b598a82ab8451c853c0661d3717e9d~mv2.png" alt="FBG sensing system" loading="lazy">
+      <video src="videos/rover-wheel.mp4" poster="images/575388_313ec0161557480f9f61be34bea05af2f000.jpg" autoplay loop muted playsinline aria-label="Rover wheel rolling over regolith simulant"></video>
+      <img src="images/575388_0cc875d22d424e6e83a13598716ac181~mv2.png" alt="Data analysis plot" loading="lazy">
+    </div>
+  </article>
+
+  <article class="project">
+    <h3>Advanced Mechanical Systems Design <span class="sub">— Fatigue</span></h3>
+    <p class="year">2025</p>
+    <div class="desc">
+      <p>Last fall, as part of the final project for ME 204 - Advanced Mechanical Systems Design, we were tasked with designing a mass-efficient mechanism that used a provided motor to extend a linear extension spring by 4.0 cm as many times over the course of six days without exiting the specified non-interference regions. Before designing, my teammate and I characterized the provided motor and calculated the torque, current, and angular velocity our system needed to maintain while staying within the thermal limits of the motor. We designed, built, and tested a crank system that used a ~1:1200 gear ratio. The system was made out of PLA, Formlabs Rigid 4k resin, and off-the-shelf components.</p>
+      <p>Out of the ten teams in the course, we were one of four teams that were able to get at least one cycle at the start of testing, one of five teams that went above 100 cycles, and we won the award for most mass efficient for a system that achieved more than 100 cycles. In the end, we achieved 260 cycles before our gears ultimately failed from shear. Looking back, we overlooked the brittleness of Rigid 4k for our gears and should have made them out of polycarbonate instead.</p>
+      <p>The images below show the final image and render of our system on the left. On the right, the plot shows the calculated vs. measured current of our motor. The discrepancy once the current falls below 0 A is due to our power supply being unable to read negative currents. The FEA simulation shows the large gear in two positions that have the highest loads.</p>
+    </div>
+    <div class="gallery">
+      <img src="images/575388_7b9c0b6de52643389edf29481c7e5269~mv2.jpg" alt="Final fatigue mechanism" loading="lazy">
+      <img src="images/575388_b16061d716d7436cab71a1edf3f0d986~mv2.png" alt="System render" loading="lazy">
+      <img src="images/575388_b934a6a304894509819b19ea3239d2b9~mv2.png" alt="Calculated vs measured current plot" loading="lazy">
+      <img src="images/575388_89e379193a79430f974623a0d0f787f8~mv2.png" alt="FEA simulation position 1" loading="lazy">
+      <img src="images/575388_736db411ff554102a9f2eec1d481ef8e~mv2.png" alt="FEA simulation position 2" loading="lazy">
+    </div>
+  </article>
+
+  <article class="project">
+    <h3>2.009 — The Product Engineering Process <span class="sub">— Neptune</span></h3>
+    <p class="year">2024</p>
+    <div class="desc">
+      <p>During the fall of 2024, I was enrolled in The Product Engineering Process—an MIT mechanical engineering capstone—working to launch an underwater communication device for Scuba divers. I was voted by my peers to co-lead our team of 18 and was one of three team members who presented our product in front of a live audience of over a thousand people. Our device allows scuba divers to communicate to one another by pressing buttons that correspond to specific messages. Nearby divers then receive their signal in the form of an auditory message through bone conducting headphones.</p>
+      <p>In addition to my role as a team lead, I led the mechanical subteam, reviewing all mechanical aspects of the product throughout production and led a 3D modeling workshop for my team on Autodesk Fusion. I designed and tested all of the waterproofing of the system and the button housing with which the user interfaces. The housings were simulated on Fusion under pressure and tested in a flooded pressure chamber to 500kPa--equivalent to around 40 meters of water depth. All mechanical parts of the assembly were SLA printed or CNC machined. Lastly, I was responsible for all team branding. Our product brochure can be found <a href="https://www.009balance.com/products/green-product-sheet.pdf">here</a>.</p>
+    </div>
+    <div class="gallery">
+      <img class="wide" src="images/575388_86388d4cf7ec493297f8fc0f815823d1~mv2.png" alt="Neptune device components" loading="lazy">
+      <img src="images/575388_a078aede85a14dc4815a3addd5407122~mv2.png" alt="Neptune housing CAD" loading="lazy">
+      <img src="images/575388_b45162056bea41c391478c26f1af9f7d~mv2.png" alt="Neptune pressure simulation" loading="lazy">
+      <img src="images/575388_d55bc193f20a412489b1e34c5f63998b~mv2.jpg" alt="Neptune demo preparation" loading="lazy">
+      <img src="images/575388_fc4a072aaf934d2b981193bc042c0fe0~mv2.jpg" alt="Neptune team demo" loading="lazy">
+    </div>
+  </article>
+
+  <article class="project">
+    <h3>Fleet Robotics <span class="sub">— Robot Test Stand</span></h3>
+    <p class="year">2024</p>
+    <div class="desc">
+      <p>Fleet Robotics is a Somerville-based start-up developing ship hull inspection and cleaning robots to reduce fuel emissions and the spread of invasive species. During the summer of 2024, I worked as a Mechanical Engineering Intern.</p>
+      <p>Along with other projects, I designed and built a robot test stand that could hold the robot in various orientations. The test stand only requires one person to shift the robot between its positions. It includes an automatic mechanical locking system that prevents the robot from sliding on the linear rails it is mounted to. Gas springs are used to counter the weight of the robot when bringing it to its vertical position. I manufactured the test stand using t-slotted framing that I cut to size using a miter saw and constructed using custom-made PAHT-CF brackets I designed. All designs were made using Fusion 360 and parts were printed with both FDM and SLA 3D printing.</p>
+    </div>
+    <div class="gallery">
+      <img src="images/575388_f40432f345844756b3120975dd79fe8b~mv2.jpg" alt="Robot test stand" loading="lazy">
+      <img src="images/575388_a2ce65ee1bb24d8a80d1d30358d3880f~mv2.png" alt="Test stand vertical position" loading="lazy">
+      <video src="videos/test-stand.mp4" poster="images/575388_9a465f8e02f54f7cb317ac7dcfac5141f000.jpg" autoplay loop muted playsinline aria-label="Robot test stand in motion"></video>
+    </div>
+  </article>
+
+  <article class="project">
+    <h3>Fleet Robotics <span class="sub">— Compliance Research and Design</span></h3>
+    <p class="year">2024</p>
+    <div class="desc">
+      <p>Fleet Robotics is a Somerville-based start-up developing ship hull inspection and cleaning robots to reduce fuel emissions and the spread of invasive species. During the summer of 2024, I worked as a Mechanical Engineering Intern.</p>
+      <p>My work was focused on modeling and designing compliant mechanisms for the robot to withstand obstacle collisions. This included analytical Matlab models on the current mechanism, research on different fabrication methods such as heat treatment and SLA resin printing, and new design concepts. After modeling the current mechanisms, I tested them using two tests that I designed that simulated different scenarios the robot could find itself in--the first being sweeping over an obstacle and the next traversing curved surfaces. Testing revealed subtle points of failure we had been overlooking, redirecting my work from strictly compliance to designing protective mechanisms.</p>
+      <p>At the end of my research and design process, I designed a new passively adapting guardrail system that protected exposed components from collision damage. The guardrail was split into six sections for ease of assembly. Each section comprised two passively moving ramps meant for collisions incoming from opposite directions. Each ramp fits into the base with dovetail features to reduce the use of fasteners. Not shown in the image for security purposes are the components the guardrail is meant to protect. I presented my work along with other projects I worked on during the summer to the team including the CEO and founder.</p>
+      <p>The images below are images of the guardrail along with other test fixtures and components I designed.</p>
+    </div>
+    <div class="gallery">
+      <img src="images/575388_9a0995ecacef45b2a873cd2d64fefae1~mv2.png" alt="Guardrail system" loading="lazy">
+      <img src="images/575388_f3795e92a5114285a1c34b3e3b1a98fa~mv2.png" alt="Guardrail CAD" loading="lazy">
+      <img src="images/575388_b1612be9f14e456ab10937623ceb8e9b~mv2.jpg" alt="Test fixture" loading="lazy">
+      <img src="images/575388_70d9ca5140ed437c83c11454758f309c~mv2.png" alt="Compliance test setup" loading="lazy">
+    </div>
+  </article>
+
+  <article class="project">
+    <h3>Measurement and Instrumentation <span class="sub">— Final Project</span></h3>
+    <p class="year">2024</p>
+    <div class="desc">
+      <p>For my final project for MIT's 2.671--Measurement and Instrumentation--I explored acoustic sensing in long filament soft robots for contact sensing. This project was a small portion of a larger project Professor Becker and I have been leading at the Fabrication-Integrated Design Lab since August 2023.</p>
+      <p>Acoustic contact sensing entails detecting changes in the frequency and amplitude of sound signals transmitted through a silicone filament using a speaker and received by a microphone at the opposite end of the filament while a force sensor taps the filament at its center. Analysis of Fast Fourier Transforms (FFTs) of sound samples demonstrated a proportional relationship between low-frequency response and peak contact force magnitude, allowing contact force magnitude to be predicted using acoustic sensing.</p>
+      <p>Findings were documented in a ten-page research paper and presented during a final poster session for the course.</p>
+    </div>
+    <div class="gallery">
+      <img src="images/575388_d839f761126e4c9fb5ec575b0e9ef525~mv2.png" alt="Acoustic sensing setup" loading="lazy">
+      <img src="images/575388_1d3520ebb63c4fab892dbe56dc094fb0~mv2.png" alt="FFT analysis" loading="lazy">
+      <img class="tall" src="images/575388_78266261b07e4b448ebecabdd70191ff~mv2.jpg" alt="Experimental apparatus" loading="lazy">
+    </div>
+  </article>
+
+  <article class="project">
+    <h3>Bio-Inspired Robotics <span class="sub">— Final Project</span></h3>
+    <p class="year">2023</p>
+    <div class="desc">
+      <p>As a final project for Bio-Inspired Robotics--a course taught by Professor Sangbae Kim--my team and I were tasked with modeling a biological process to uncover new information that cannot necessarily be derived through mathematical analysis alone. We decided to model a Volleyball spike to relate wrist stiffness to maximum ball velocity achieved. This mechanism had two degrees of freedom--the rotation of the elbow joint and the rotation of the wrist joint--both powered by a motor. To model our mechanism, we used Lagrangian Dynamics to derive the equations of motion and used MATLAB to derive the forward kinematics of the system. To specifically model the wrist stiffness we implemented an effective stiffness on the wrist motor using a PID controller. The forearm joint also had implemented a PID controller. The idea was that as the forearm swung, the inertia of the hand would cause the hand to whip due to the implemented stiffness. We simulated and tested our mechanism using MATLAB and Mbed.</p>
+      <p>Our simulation found no clear correlation between wrist stiffness and ball velocity--contrary to our initial hypothesis. Our experiment showed that the ball velocity increased then remained constant after an effective stiffness of k=3N/m.</p>
+      <p>We presented our findings and mechanism to our section and the broader MIT community. If more time would have allowed, we would have investigated the timing of wrist stiffness implementation and its correlation to maximum ball velocity.</p>
+      <p>The mechanism was completely custom made using Fusion 360. Parts were machined both using a Waterjet and FDM 3D printer. The system used a belt and belt tensioning system to drive the rotation of the hand to reduce the rotational inertia of the system by locating the hand motor at the base.</p>
+    </div>
+    <div class="gallery">
+      <img src="images/575388_73d8f9143d0c4a5090d260420c853113~mv2.jpg" alt="Volleyball spike mechanism" loading="lazy">
+      <img src="images/575388_c5a262feb9de47a9b0e227b65f7a5f96~mv2.jpg" alt="Mechanism detail" loading="lazy">
+    </div>
+  </article>
+
+  <article class="project">
+    <h3>Boston Dynamics <span class="sub">— Large Part Organizational Racks</span></h3>
+    <p class="year">2023</p>
+    <div class="desc">
+      <p>During summer of 2023, I worked as a Manufacturing engineering intern at Boston Dynamics. In addition to resolving production blockers such as instruction ambiguity, defective parts, etc., I designed, built, and implemented three organizational racks for the large components of Stretch--a case handling factory robot. These racks are mobile and are now being used daily in the assembly line. The overall design process included choosing the racks, fasteners, protective mats and foam, and struts along with ordering all of these components and tracking their inventory.</p>
+      <p>Each rack holds 23 different components in the order that they are used in the work instructions on the main line. I met with the technicians that work on the main line to get their suggestions and preferences for how they wanted the racks to be set up. This included differently sized components on different levels, descriptive labels including graphics of the orientation of each component, etc. Each rack takes about 12 hours to build up if all materials are available and I created work instructions for how to build up the racks. The racks are currently being used at Boston Dynamics.</p>
+    </div>
+    <div class="gallery">
+      <img class="tall" src="images/575388_e1dfeb3b45ce441c80953f9f2b09ad04~mv2.png" alt="Organizational rack" loading="lazy">
+      <img src="images/575388_ec55c25487494782a70b2dccb27ded55~mv2.jpg" alt="Rack in assembly line" loading="lazy">
+    </div>
+  </article>
+
+  <article class="project">
+    <h3>Boston Dynamics <span class="sub">— Thermal Paste Applicator</span></h3>
+    <p class="year">2023</p>
+    <div class="desc">
+      <p>During summer of 2023, I worked as a Manufacturing engineering intern at Boston Dynamics. In addition to resolving production blockers such as instruction ambiguity, defective parts, etc., I designed, prototyped, and implemented a thermal paste application tool to be used in the assembly line of Stretch--a factory case handling robot. This tool applied thermal paste evenly on four LEDs on a 19.0mm X 19.0mm +/- 1.0mm area at a thickness of 0.3mm +/- 0.1mm. The assembly was designed on Catia CAD software and built using the following methods: HP Multi Jet Fusion 3D printing, CNC Mill, Lathe, Waterjet, and Laser cutting. The tool was made to speed up this step in the production process and make the thickness and application of the thermal paste consistent between different builds--regardless of what technician was using the tool.</p>
+      <p>I presented my project in a 15-minute presentation to the rest of the company's interns, recruiters, team members, and executives. This method is currently being used at Boston Dynamics.</p>
+    </div>
+    <div class="gallery">
+      <img src="images/575388_45c3348d2a3543848af9c8bbf9ff8382~mv2.png" alt="Thermal paste applicator" loading="lazy">
+      <img src="images/575388_76ac315ca6a7455cbcf64a7ac533db42~mv2.png" alt="Applicator CAD" loading="lazy">
+      <img src="images/575388_9ccf857d9cf144048fd73ce90b898536~mv2.jpg" alt="Applicator prototype" loading="lazy">
+      <img src="images/575388_e5cac451035d4917ab782f061887cca3~mv2.jpg" alt="Applicator in use" loading="lazy">
+      <img src="images/575388_acd7083a25144b73898360e872cbbd7c~mv2.png" alt="Applicator assembly" loading="lazy">
+      <img src="images/575388_3292df9cfd4240498be16e5380263722~mv2.png" alt="Applicator components" loading="lazy">
+    </div>
+  </article>
+
+  <article class="project">
+    <h3>Design and Manufacturing I <span class="sub">— Final Project</span></h3>
+    <p class="year">2023</p>
+    <div class="desc">
+      <p>For the final project of MIT's Design and Manufacturing I class, we were tasked with building a robot to complete a series of tasks on a game-board to compete against the robot of another classmate. I designed, machined, and assembled a robot with a liftable actuated gripper. This gripper has six degrees of freedom (x, y, z, roll, pitch, and yaw). The system uses the gripper to pick up balls to be placed on a rotating platform four feet in height. The gripper also spins a wheel continuously at ~25 rpm and can be used to perform more tasks on the game-board. The robot is machined out of aluminum, steel, and acrylic using a CNC mill and lathe, water jet, and laser cutter.</p>
+      <p>Since the gripper spins continuously relative to the rest of the system, it is fully controlled by a separate system since the wires of the servo that actuates the gripping cannot be led back to the rest of the assembly without tangling the wires.</p>
+    </div>
+    <div class="gallery">
+      <img src="images/575388_cb174934aaef42c4b8e4a0add9e67d0b~mv2.png" alt="Competition robot" loading="lazy">
+      <img src="images/575388_1ace0433568a44d3a630dc837c8d0e2b~mv2.png" alt="Robot CAD" loading="lazy">
+      <img src="images/575388_627345798ec04d01824b246258b1cf6d~mv2.jpg" alt="Robot gripper" loading="lazy">
+      <img src="images/575388_66142eb6b3244e2c9eb1b5514e9dc78c~mv2.jpg" alt="Robot detail" loading="lazy">
+      <img src="images/575388_7e33dd405eea4afea86555e05f8d88fa~mv2.jpg" alt="Robot on game board" loading="lazy">
+      <img src="images/575388_759a86f8a15e4846b3efb580bd936f88~mv2.jpg" alt="Robot assembly" loading="lazy">
+    </div>
+  </article>
+
+  <article class="project">
+    <h3>MIT Sea Grant <span class="sub">— Mechanical Engineering</span></h3>
+    <p class="year">2023</p>
+    <div class="desc">
+      <p>MIT Sea Grant is a Lab focusing on oceanic research, exploration, and engineering. With projects ranging from soft robotics, to underwater vessels, to automated boats, the lab is conducting research that is first of its kind. The project I am working on is an underwater zip-line robot that can be used to collect underwater measurements--'Zippy' for short.</p>
+      <p>Currently, my primary focus on the project is an autonomous charging and docking system. Using wireless inductive charging, we are charging the robot with six wireless transmitters housed on the docking system. Mounted on the robot is the counter part charging system made up of six wireless receivers. Once the robot is nearing the end of its battery, it climbs back up the zip-line and mates with the docking system, charging the robot. All components on the system are waterproof and saltwater safe. Since the cable that the robot travels on can be in any orientation (straight or at an angle), the dock must stay in line with the cable regardless of the cable's orientation and external factors such as wind. However, the dock must be able to rotate on the cable axis and expand, allowing the receiver counter part to passively slide flushed into the system. Additionally, this entire system must be easily removable from the cable.</p>
+    </div>
+    <div class="gallery">
+      <img src="images/575388_dbe406dac75a43bdbce86b8e26006184~mv2.png" alt="Zippy docking system CAD" loading="lazy">
+      <img src="images/575388_2cc516d7d0344c43a810c1cad4786ca1~mv2.jpg" alt="Docking system detail" loading="lazy">
+      <img src="images/575388_48a82bba25a14c21a8ca6c4058b95e5b~mv2.png" alt="Charging system" loading="lazy">
+      <img src="images/575388_93876c71daf54ce4a82acd3f685c6334~mv2.jpg" alt="Zippy robot" loading="lazy">
+      <img src="images/575388_f208a34e21804a65845907485a2d831e~mv2.jpg" alt="Zippy on zip-line" loading="lazy">
+    </div>
+  </article>
+
+  <article class="project">
+    <h3>AttentivU — MIT Media Lab <span class="sub">— Mechanical Design</span></h3>
+    <p class="year">2022</p>
+    <div class="desc">
+      <p>During the fall of 2022, I worked at AttentivU, a lab at the MIT Media Lab developing a pair of glasses that senses brain EEG activity and eye EOG movement to measure cognitive processes. The device is used for passive and active interventions, monitoring the state of a user and providing haptic feedback in response to low levels of attention from the user.</p>
+      <p>During my internship position, I designed and built a spring loaded sensor connected to one of the legs of the glasses. The part was designed to be adjustable for various head sizes, providing pressure from the spring metal onto the user's head. This was to ensure that the sensor had adequate contact with the head to maximize signal measurements. The sensor can be turned on and off and be connected to a device by removing the sliding lid off the assembly, making it so that the sensor only needs to be removed when switching out the battery.</p>
+      <p>Moreover, I worked on implementing laser cut lenses to the glasses and magnetic wire connectors at the hinges of the glasses to eliminate wires running through the hinges. These wires were previously subject to wear and tear as the pair is repeatedly opened and closed. These magnetic connectors will not only prevent this from happening, but it will also make it so the battery and the PCB board are not connected when the glasses are folded--minimizing battery usage.</p>
+    </div>
+    <div class="gallery">
+      <img src="images/575388_d0e7bb8227874d048b34def8f066df5f~mv2.png" alt="AttentivU glasses sensor" loading="lazy">
+      <img src="images/575388_183a117e930e4c0ea280f742f59c7c85~mv2.png" alt="Sensor assembly CAD" loading="lazy">
+    </div>
+  </article>
+
+  <article class="project">
+    <h3>BIOMEC Lab <span class="sub">— Mechanical Design</span></h3>
+    <p class="year">2022</p>
+    <div class="desc">
+      <p>During the summer of 2022, I worked at BIOMEC, a biomechanics lab at UPC in Barcelona, as part of an MIT program that I was accepted into that sends students abroad, hosted by labs and companies all over the world. This lab focused on lower limb exoskeletons for stroke survivors.</p>
+      <p>The first of the projects that I was tasked with was a battery and PCB board housing that was mounted to the waist attachment of the exoskeleton. This included four different components: the PCB cover, the battery encasing, a sliding door, and a screwed door. The battery was removable and connected to a switch that turned on the PCB board. All parts were designed using Solidworks and printed in PLA. Moreover, I developed a battery charger for the smart RRC battery since the company had not yet released the charger. I did so using a battery charging chip from Analog Devices and GUI software.</p>
+      <p>Second, I designed and built an attachment method from the thigh to the hip that offered vertical support to the exoskeleton while allowing free leg movement. I did so using ball bearings for seamless rotation of the leg and an adjustable Click Medical boa attachment for side to side movement.</p>
+      <p>For the lower shank attachment of the exoskeleton, we were facing issues with user comfortability regarding the previously static nature of the design. To solve this problem, I installed a bearing into the design so that the attachment could freely rotate as the user's leg moved. This part is designed to be as compact and lightweight as possible. For this reason the part includes a sliding door to secure the bearing in place instead of screws. The design went through three different iterations, changing the way the bearing itself was secured. This final design secures the bearing through pressure forces instead of press-fits or friction.</p>
+    </div>
+    <div class="gallery">
+      <img src="images/575388_17321bad430e486a92a1f4ebb4d96e53~mv2.png" alt="Exoskeleton housing" loading="lazy">
+      <img src="images/575388_598d9b86f21c4916902c3b6de4ee7414~mv2.png" alt="Exoskeleton attachment" loading="lazy">
+      <img src="images/575388_84f126ea0a254cca96855369fd095061~mv2.png" alt="Shank attachment CAD" loading="lazy">
+    </div>
+  </article>
+
+  <article class="project">
+    <h3>Humidity Control of Smart Robotic Home Cleaner</h3>
+    <p class="year">2021</p>
+    <div class="desc">
+      <p>During my summer 2021 internship at Matician--a robotics start-up developing autonomous home cleaners--I was given the task to reduce the humidity levels inside of the bin of the robot. The vacuum motor inside of the robot was rated to run at 85% Relative Humidity; however, with the robot's bin closed and the waste bag full of water, 85% RH is reached in under five minutes--damaging the vacuum motor.</p>
+      <p>I explored six different methods to reduce the humidity, ranging from passive mechanical solutions, to absorbent material based solutions, to actuated mechanical solutions. The two main concepts I focused on were absorbing water vapor using Silica Gel and sealing the bin with a flexible membrane. The membrane would be nominally open when the vacuum was not running--allowing air flow into the bin--but would suction onto the lid, sealing the bin, when running the vacuum. I ran dozens of tests on each of these concepts, taking internal and external humidity, temperature, and pressure readings. At the end of my project, I compiled all of my data and designs into a presentation that I presented to my team.</p>
+    </div>
+    <div class="gallery">
+      <img src="images/575388_3d6243f7686343eb85d5a124caca7f14~mv2.jpeg" alt="Humidity control test setup" loading="lazy">
+      <img src="images/575388_ef968432b76b47a797ed087f1133a64b~mv2.jpeg" alt="Robot bin testing" loading="lazy">
+    </div>
+  </article>
+
+  <article class="project">
+    <h3>Robotic Hand</h3>
+    <p class="year">2020</p>
+    <div class="desc">
+      <p>For my capstone project of my engineering class in my Senior year of High School, I designed a user-controlled robotic hand. The system is broken up into two parts: a sensory glove worn by the user and the robotic hand.</p>
+      <p>The sensory glove was designed to comply with the stretching of a user's hand as it opened and closed. The system uses an array of stretch sensors which measure the flexing and extending of a user's fingers. The feedback of the sensors are then translated into servo inputs used by the prosthetic hand. According to the amount that a finger bends, the servo on the prosthetic pulls on a wire which in turn bends the 3D printed finger the same amount. All parts were created using Autodesk CAD and Fusion 360 and was coded using Arduino C++.</p>
+      <p>The design of the hand mimics the true biology of a human hand. In a natural hand, the muscles that move each finger are located not in the hand itself, but in the forearm. Likewise, in this design the servos that move the hand are located in the forearm of the prosthetic and wires attached to the servos pull on the tips of each finger to bend each finger. Elastic bands are located on the backside of the fingers to allow them to return to the extended position after bending. Unfortunately, due to Covid-19, I was unable to complete the next phase of the project which was to send sensory information back to the user in the form of electric pulses triggered by touch sensors on the prosthetic hand.</p>
+    </div>
+    <div class="gallery">
+      <img src="images/575388_aeba8448f0924e52b1ce7588836bd6fb~mv2.jpg" alt="Robotic hand" loading="lazy">
+      <img src="images/575388_af30ff9173b34cedaa3a2940b8190370~mv2.png" alt="Sensory glove" loading="lazy">
+      <img src="images/575388_a6d5e175960840219e742c08758f1c7b~mv2.png" alt="Hand mechanism" loading="lazy">
+      <img src="images/575388_67c952ee36164d7f92d4702e965b54d5~mv2.png" alt="Hand CAD" loading="lazy">
+    </div>
+  </article>
+
+  <article class="project">
+    <h3>Brushless Electric Motor</h3>
+    <p class="year">2019</p>
+    <div class="desc">
+      <p>As part of my Applied Science Engineering class in high school, I built a brushless electric motor using six electromagnets that I made and an array of hall chips housed in a single 3D printed part. When one of the four permanent magnets on the internal spinning part rotates past a hall chip located on the inside of the motor, it triggers the preceding electromagnet switch polarity to repel that magnet, causing the magnet to rotate away from the e-mag. Simultaneously, the approaching electromagnet relative to the spinning permanent magnet is triggered to switch polarities to pull the magnet. Per each revolution, the motor switches 16 times, completing 4 cycles of the electromagnet configuration of the motor. The configurations are combinations of the polarity of the electromagnets. This motor rotates at a top speed of 10,500 revolutions per minute. The motor was designed on Autodesk CAD and then FDM 3D printed. The circuit of the motor is controlled by six hall chips and a switching circuit using both npn and pnp transistors. A pair of hall chips change the polarity of two electromagnets making it so the complete circuit of the motor is three identical circuits of the circuit seen below--totaling to 18 transistors.</p>
+    </div>
+    <div class="gallery">
+      <img src="images/575388_6c966977c63b46d2b404242c81f0fb2b~mv2.jpg" alt="Brushless motor" loading="lazy">
+      <img src="images/575388_508480baa1d74b199ef86bc44ac3ecfa~mv2.png" alt="Motor assembly" loading="lazy">
+      <img src="images/575388_6e57b7254c65466998616f5d4d3f41eb~mv2.png" alt="Switching circuit diagram" loading="lazy">
+    </div>
+  </article>
+
+  <article class="project">
+    <h3>Weather Balloon Launch</h3>
+    <p class="year">2019</p>
+    <div class="desc">
+      <p>For a class project, I along with four of my peers designed and built a payload that was attached to a weather balloon. We each had a role our professor assigned us--I was team leader and balloon tracking. Throughout the building process we tested the payload to be able to withstand the extreme temperature and pressure of the atmosphere and incorporated heating mechanisms to prevent the Arduino from crashing and our batteries from draining. The balloon was launched and reached the atmosphere. The payload took measurements of pressure, temperature, radiation, carbon dioxide, acceleration as a function of air density, temperature in the wake of the balloon, and wind speeds in the stratosphere. Once the balloon reached a certain height, a collection of capacitors were triggered to send current to a wire to burn through a string attaching the payload to the balloon, releasing the parachute. For a month, my team and I worked after school and on weekends to ensure that all aspects of the project are working as a single unit. This was a semester long project which we launched out of Palo Alto, CA. The balloon landed in an unreachable cliff so we were unable to retrieve our data. We wrote a 100 page report, illustrating our findings and design process.</p>
+    </div>
+    <div class="gallery">
+      <img src="images/575388_c0448a2687a0407cad79bfd47873953c~mv2.jpg" alt="Weather balloon payload" loading="lazy">
+      <img src="images/575388_6451316a1de543dd9ac72e28df4e27f5~mv2.png" alt="Payload instrumentation" loading="lazy">
+      <img src="images/575388_f473421b57294de8a50f88dde27e8889~mv2.jpg" alt="Balloon launch" loading="lazy">
+    </div>
+  </article>
+
+</div>
+
+
+<footer>
+  <p>©2026 by Olivia Velten-Lomelin - Portfolio.</p>
+</footer>
+
+<button class="to-top" aria-label="Back to top">↑</button>
+
+<div class="lightbox" role="dialog" aria-label="Image viewer">
+  <button class="lb-close" aria-label="Close">×</button>
+  <button class="lb-prev" aria-label="Previous image">‹</button>
+  <img src="" alt="">
+  <button class="lb-next" aria-label="Next image">›</button>
+</div>
+
+</body>
+</html>
