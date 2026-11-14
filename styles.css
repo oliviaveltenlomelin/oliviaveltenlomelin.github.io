@@ -693,3 +693,28 @@ body.dark.home .nav.scrolled .nav-links a.resume-link { color: #0e141c; }
   /* full-height hero that respects the iPhone address bar */
   .home .hero { min-height: 100svh; }
 }
+
+/* ---------- Mobile: inner pages use a solid, in-flow nav ---------- */
+@media (max-width: 760px) {
+  body.sub .nav {
+    position: sticky;
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid var(--rule);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  body.sub .nav .nav-brand,
+  body.sub .nav .theme-toggle,
+  body.sub .nav .nav-burger {
+    color: var(--ink);
+  }
+
+  body.sub .nav .nav-brand { color: var(--navy); }
+
+  body.dark.sub .nav { background: rgba(14, 20, 28, 0.96); }
+  body.dark.sub .nav .nav-brand { color: var(--navy); }
+
+  /* banner no longer needs to clear a floating nav */
+  body.sub .banner { height: 180px; padding-top: 0; }
+}
