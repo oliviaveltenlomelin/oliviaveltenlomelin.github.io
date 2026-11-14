@@ -599,3 +599,19 @@ body.dark.home .nav.scrolled { background: rgba(14, 20, 28, 0.92); }
 body.dark.home .nav.scrolled .nav-brand { color: var(--navy); }
 body.dark.home .nav.scrolled .nav-links a { color: var(--ink); }
 body.dark.home .nav.scrolled .nav-links a.resume-link { color: #0e141c; }
+
+/* JS masonry: keeps DOM order roughly top-to-bottom */
+.photo-grid.js-masonry {
+  columns: unset;
+  display: flex;
+  gap: 10px;
+}
+
+.photo-grid.js-masonry .pg-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.photo-grid.js-masonry img { margin-bottom: 0; height: auto; }

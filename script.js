@@ -134,3 +134,29 @@ if (document.body.classList.contains("home")) {
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 }
+
+// ----- Row-ordered masonry for the art gallery -----
+const photoGrid = document.querySelector(".photo-grid");
+if (photoGrid) {
+  const imgs = Array.from(photoGrid.querySelectorAll("img"));
+  const layout = () => {
+    const n = Math.min(4, Math.max(2, Math.floor(photoGrid.clientWidth / 250)));
+    photoGrid.classList.add("js-masonry");
+    photoGrid.querySelectorAll(".pg-col").forEach((c) => c.remove());
+    const cols = Array.from({ length: n }, () => {
+      const d = document.createElement("div");
+      d.className = "pg-col";
+      photoGrid.appendChild(d);
+      return { el: d, h: 0 };
+    });
+    imgs.forEach((img) => {
+      const aspect = img.getAttribute("height") / img.getAttribute("width");
+      const shortest = cols.reduce((a, b) => (a.h <= b.h ? a : b));
+      shortest.el.appendChild(img);
+      shortest.h += aspect;
+    });
+  };
+  layout();
+  let t;
+  window.addEventListener("resize", () => { clearTimeout(t); t = setTimeout(layout, 150); });
+}
