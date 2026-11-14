@@ -181,7 +181,7 @@ button, input, select, textarea { font-family: var(--font); }
 
 .about .headshot-wrap {
   width: 100%;
-  max-width: 360px;
+  max-width: 280px;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   overflow: hidden;
@@ -430,7 +430,7 @@ footer {
 /* ---------- Responsive ---------- */
 @media (max-width: 760px) {
   .about { grid-template-columns: 1fr; gap: 2rem; }
-  .about .headshot-wrap { order: -1; max-width: 260px; }
+  .about .headshot-wrap { order: -1; max-width: 200px; }
   .contact { grid-template-columns: 1fr; gap: 1.6rem; }
   .project .gallery img { height: 160px; }
   .project .gallery video { height: 160px; }
