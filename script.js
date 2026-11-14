@@ -160,3 +160,19 @@ if (photoGrid) {
   let t;
   window.addEventListener("resize", () => { clearTimeout(t); t = setTimeout(layout, 150); });
 }
+
+// ----- Mobile hamburger menu -----
+const burger = document.querySelector(".nav-burger");
+const navEl = document.querySelector(".nav");
+if (burger && navEl) {
+  burger.addEventListener("click", () => {
+    const open = navEl.classList.toggle("open");
+    burger.textContent = open ? "\u2715" : "\u2630";
+  });
+  navEl.querySelectorAll(".nav-links a").forEach((a) =>
+    a.addEventListener("click", () => {
+      navEl.classList.remove("open");
+      burger.textContent = "\u2630";
+    })
+  );
+}
