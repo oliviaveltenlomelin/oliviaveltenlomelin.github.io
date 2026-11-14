@@ -150,7 +150,7 @@ if (photoGrid) {
       return { el: d, h: 0 };
     });
     imgs.forEach((img) => {
-      const aspect = img.getAttribute("height") / img.getAttribute("width");
+      const aspect = (img.dataset.h || 3) / (img.dataset.w || 4);
       const shortest = cols.reduce((a, b) => (a.h <= b.h ? a : b));
       shortest.el.appendChild(img);
       shortest.h += aspect;
